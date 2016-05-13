@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="SimHub" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-SimHubAPI-20160510065304.mdf;Initial Catalog=aspnet-SimHubAPI-20160510065304;Integrated Security=True" />
+  <setParameter name="SimHubAPIContext-Web.config Connection String" value="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=SimHubAPIContext-20160510071750; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|SimHubAPIContext-20160510071750.mdf" />
+</parameters>

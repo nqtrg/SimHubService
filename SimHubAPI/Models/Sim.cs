@@ -23,4 +23,22 @@ namespace SimHubAPI.Models
         // Navigation property
         public Owner Owner { get; set; }
     }
+
+    public class SimDTO
+    {
+
+        //public int Id { get; set; }
+
+        public string Number { get; set; }
+
+        public string Price { get; set; }
+        public string Made { get; set; }
+        //public string ownerName { get; set; }
+        public string Type { get; set; }
+
+        // Foreign Key
+        public int OwnerId { get; set; }
+        // Navigation property
+        //public Owner Owner { get; set; }
+    }
 }

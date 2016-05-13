@@ -31,7 +31,17 @@ namespace SimHubAPI.Controllers
         [ResponseType(typeof(Sim))]
         public async Task<IHttpActionResult> GetSim(int id)
         {
-            Sim sim = await db.Sims.FindAsync(id);
+            var sim = from s in db.Sims
+                      where s.Id == id
+                      select new SimDTO()
+                      {
+                          Number = s.Number,
+                          Price = s.Price,
+                          Made = s.Made,
+                          OwnerId = s.OwnerId,
+                          Type = s.Type
+                      };
+
             if (sim == null)
             {
                 return NotFound();
@@ -39,6 +49,59 @@ namespace SimHubAPI.Controllers
 
             return Ok(sim);
         }
+
+        //get sim theo number tan cung bang day
+        // GET: api/Sims?end=678
+        [ResponseType(typeof(Sim))]
+        public async Task<IHttpActionResult> GetSimEnding(string end)
+        {
+            // Sim sim = await db.Sims.FindAsync(end);
+            var sim = from s in db.Sims
+                      where s.Number.EndsWith(end)
+                      select new SimDTO()
+                      {
+                          Number = s.Number,
+                          Price = s.Price,
+                          Made = s.Made,
+                          OwnerId = s.OwnerId,
+                          Type = s.Type
+                      };
+            if (sim == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(sim);
+        }
+
+        //get sim theo kieu number co chua day
+        // GET: api/Sims?end=678
+        [ResponseType(typeof(Sim))]
+        public async Task<IHttpActionResult> GetSimContain(string segment)
+        {
+            // Sim sim = await db.Sims.FindAsync(end);
+            var sim = from s in db.Sims
+                      where s.Number.Contains(segment)
+                      select new SimDTO()
+                      {
+                          Number = s.Number,
+                          Price = s.Price,
+                          Made = s.Made,
+                          OwnerId = s.OwnerId,
+                          Type = s.Type
+                      };
+            if (sim == null)
+            {
+                return NotFound();
+            }
+            return Ok(sim);
+        }
+
+
+
+
+
+
 
         // PUT: api/Sims/5
         [ResponseType(typeof(void))]
@@ -119,5 +182,7 @@ namespace SimHubAPI.Controllers
         {
             return db.Sims.Count(e => e.Id == id) > 0;
         }
+
+
     }
 }

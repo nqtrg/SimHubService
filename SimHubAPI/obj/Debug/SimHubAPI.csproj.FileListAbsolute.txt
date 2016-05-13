@@ -77,3 +77,4 @@ D:\WorkSpaceVisualStudio\SimHubAPI\SimHubAPI\obj\Debug\SimHubAPI.pdb
 D:\WorkSpaceVisualStudio\SimHubAPI\SimHubAPI\obj\Debug\SimHubAPI.Migrations.Initial.resources
 D:\WorkSpaceVisualStudio\SimHubAPI\SimHubAPI\obj\Debug\SimHubAPI.csproj.GenerateResource.Cache
 D:\WorkSpaceVisualStudio\SimHubAPI\SimHubAPI\obj\Debug\SimHubAPI.csprojResolveAssemblyReference.cache
+D:\WorkSpaceVisualStudio\SimHubAPI\SimHubAPI\obj\Debug\SimHubAPI.Migrations.Initial1.resources

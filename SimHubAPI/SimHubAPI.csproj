@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201605100026241_Initial.Designer.cs">
       <DependentUpon>201605100026241_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605101803466_Initial1.cs" />
+    <Compile Include="Migrations\201605101803466_Initial1.Designer.cs">
+      <DependentUpon>201605101803466_Initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -255,6 +259,10 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\nguqtruong.pubxml" />
+    <None Include="Properties\PublishProfiles\nguqtruong2016may11.pubxml" />
+    <None Include="Properties\PublishProfiles\nguqtruong2016May11v1.0.pubxml" />
+    <None Include="Properties\PublishProfiles\nguqtruong2016May11v1.1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -266,7 +274,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -296,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201605100026241_Initial.resx">
       <DependentUpon>201605100026241_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605101803466_Initial1.resx">
+      <DependentUpon>201605101803466_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
